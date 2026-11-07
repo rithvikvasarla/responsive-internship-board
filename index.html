@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore and search internship opportunities.">
+    <title>Internship Board</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo">Internship Board</a>
+
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#internships">Internships</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <p class="tagline">YOUR CAREER STARTS HERE</p>
+                <h1>Find Your Dream <span>Internship</span></h1>
+                <p>
+                    Discover exciting internship opportunities,
+                    develop new skills and build your future.
+                </p>
+                <a href="#internships" class="hero-btn">
+                    Explore Internships
+                </a>
+            </div>
+        </section>
+
+        <section class="container internships" id="internships">
+            <div class="section-heading">
+                <h2>Available Internships</h2>
+                <p>Find opportunities that match your interests.</p>
+            </div>
+
+            <form id="filter-form" class="filters" role="search">
+                <div class="form-group">
+                    <label for="search-input">Search internship</label>
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Search by title, company or skill..."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="domain-filter">Select Domain</label>
+                    <select id="domain-filter">
+                        <option value="all">All Domains</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mode-filter">Work Mode</label>
+                    <select id="mode-filter">
+                        <option value="all">All Modes</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="On-site">On-site</option>
+                    </select>
+                </div>
+
+                <button type="reset" class="reset-btn">
+                    Clear Filters
+                </button>
+            </form>
+
+            <div class="results">
+                <p id="result-count" aria-live="polite">
+                    Loading internships...
+                </p>
+            </div>
+
+            <div
+                id="internship-grid"
+                class="internship-grid"
+                aria-busy="true"
+            ></div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Internship Board</h2>
+                <p>
+                    Internship Board helps students explore internship
+                    opportunities in different domains. Search, filter
+                    and discover opportunities to begin your career journey.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Internship Board. All rights reserved.</p>
+        <p>Developed using HTML, CSS and JavaScript.</p>
+    </footer>
+
+    <dialog id="details-dialog" aria-labelledby="dialog-title">
+        <button id="close-dialog" type="button"
+                aria-label="Close details">✕</button>
+        <div id="dialog-content"></div>
+    </dialog>
+
+</body>
+</html>
